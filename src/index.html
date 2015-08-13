@@ -1,23 +1,41 @@
 <!doctype html>
-<html lang="en" ng-app="Dashboard">
+<html lang="en" ng-app="RDash">
 <head>
-	<meta charset="UTF-8">
+  <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
+<<<<<<< HEAD
 	<title>Dashboard</title>
 
   <link rel="stylesheet" type="text/css" href="css/dashboard.min.css">
 
+=======
+	<title>RDash AngularJS</title>
+  <!-- STYLES -->
+  <!-- build:css lib/css/main.min.css -->
+  <link rel="stylesheet" type="text/css" href="components/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="components/font-awesome/css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="components/rdash-ui/dist/css/rdash.min.css">
+  <!-- endbuild -->
+  <!-- SCRIPTS -->
+  <!-- build:js lib/js/main.min.js -->
+  <script type="text/javascript" src="components/angular/angular.min.js"></script>
+  <script type="text/javascript" src="components/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
+  <script type="text/javascript" src="components/angular-cookies/angular-cookies.min.js"></script>
+  <script type="text/javascript" src="components/angular-ui-router/release/angular-ui-router.min.js"></script>
+  <!-- endbuild -->
+  <!-- Custom Scripts -->
+  <script type="text/javascript" src="js/dashboard.min.js"></script>
+>>>>>>> rdash/master
 </head>
 <body ng-controller="MasterCtrl">
-  <div id="page-wrapper" ng-class="{'active': toggle}" ng-cloak>
+  <div id="page-wrapper" ng-class="{'open': toggle}" ng-cloak>
 
     <!-- Sidebar -->
-
     <div id="sidebar-wrapper">
       <ul class="sidebar">
         <li class="sidebar-main">
-          <a href="#" ng-click="toggleSidebar()">
+          <a ng-click="toggleSidebar()">
             Dashboard
             <span class="menu-icon glyphicon glyphicon-transfer"></span>
           </a>
@@ -32,12 +50,12 @@
       </ul>
       <div class="sidebar-footer">
         <div class="col-xs-4">
-          <a href="https://github.com/Ehesp/Responsive-Dashboard" target="_blank">
+          <a href="https://github.com/rdash/rdash-angular" target="_blank">
             Github
           </a>
         </div>
         <div class="col-xs-4">
-          <a href="#" target="_blank">
+          <a href="https://github.com/rdash/rdash-angular/README.md" target="_blank">
             About
           </a>
         </div>
@@ -48,14 +66,12 @@
         </div>
       </div>
     </div>
-
     <!-- End Sidebar -->
 
     <div id="content-wrapper">
       <div class="page-content">
 
         <!-- Header Bar -->
-
         <div class="row header">
           <div class="col-xs-12">
             <div class="user pull-right">
@@ -116,14 +132,15 @@
             </div>
           </div>
         </div>
-
         <!-- End Header Bar -->
 
         <!-- Main Content -->
-        <section data-ui-view></section>
+        <div ui-view></div>
+
       </div><!-- End Page Content -->
     </div><!-- End Content Wrapper -->
   </div><!-- End Page Wrapper -->
+<<<<<<< HEAD
 
   <script type="text/javascript" src="js/vendors.min.js"></script>
   <script type="text/javascript" src="js/dashboard.min.js"></script>
@@ -336,5 +353,7 @@
       </div>
     </div>
   </script>
+=======
+>>>>>>> rdash/master
 </body>
 </html>
